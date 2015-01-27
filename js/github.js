@@ -49,6 +49,8 @@ GithubClient.prototype.drawToPage = function() {
             val.updated_at = (new Date(Date.parse(val.updated_at))).toDateString().slice(4);
             document.querySelector('.' + self + '>.repoList').innerHTML += _.template(tempRepos[0], val);
         })
-        main.innerHTML += "</div></div>"
-    })
+        main.innerHTML += "</div></div>";
+    }).then(function(){
+        	document.querySelector('main').style.left = 0;
+        })
 };

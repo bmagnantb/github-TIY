@@ -10,9 +10,7 @@ var Router = Backbone.Router.extend({
         document.querySelector('.userMenu').style.top = 0;
         window.setTimeout(function() {
             new GithubClient(name);
-        }, 500).then(function() {
-            document.querySelector('main').style.left = 0;
-        });
+        }, 500);
         document.querySelector('html').style.opacity = 1;
     },
 

@@ -38,8 +38,6 @@ GithubClient.prototype.drawToPage = function() {
             dataUser[0].blog = '';
         }
 
-        console.log(arguments);
-
         // write data
         var main = document.querySelector('main');
         main.innerHTML = '<div class="userData ' + self + '">';
@@ -52,7 +50,5 @@ GithubClient.prototype.drawToPage = function() {
             document.querySelector('.' + self + '>.repoList').innerHTML += _.template(tempRepos[0], val);
         })
         main.innerHTML += "</div></div>"
-    }).then(function() {
-        document.querySelector('main').style.left = 0;
     })
 };

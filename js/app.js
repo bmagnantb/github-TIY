@@ -25,10 +25,6 @@ function app() {
     ).then(function() {
         // start app?
 
-        // move menu to center for load
-
-
-        // set up backbone
         var users = ['arbolkiri', 'maprules1000', 'Jrharper0592', 'firehawk09', 'dorshinho', 'kawill', 'aallen-dev', 'cjros', 'pmarsh41', 'bmagnantb'];
 
         users.forEach(function(val) {

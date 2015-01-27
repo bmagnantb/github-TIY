@@ -38,15 +38,21 @@ GithubClient.prototype.drawToPage = function() {
             dataUser[0].blog = '';
         }
 
+        console.log(arguments);
+
         // write data
         var main = document.querySelector('main');
         main.innerHTML = '<div class="userData ' + self + '">';
         document.querySelector('.' + self).innerHTML = _.template(tempUser[0], dataUser[0]);
+        dataRepos[0].sort(function(a, b) {
+            return (a.updated_at > b.updated_at) ? -1 : 1;
+        })
         dataRepos[0].forEach(function(val, ind, arr) {
+            val.updated_at = (new Date(Date.parse(val.updated_at))).toDateString().slice(4);
             document.querySelector('.' + self + '>.repoList').innerHTML += _.template(tempRepos[0], val);
         })
         main.innerHTML += "</div></div>"
-    }).then(function(){
-    	document.querySelector('main').style.left = 0;
+    }).then(function() {
+        document.querySelector('main').style.left = 0;
     })
 };

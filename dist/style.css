@@ -915,11 +915,11 @@ main {
 .user {
   position: absolute;
   left: 0;
-  width: 13em;
+  width: 14em;
   margin-left: 1em; }
   .user > img {
     max-width: 13em;
-    margin: 0 auto .5em;
+    margin: 0 0 .5em;
     display: block;
     -webkit-border-radius: .5em;
             border-radius: .5em; }
@@ -931,7 +931,7 @@ main {
     margin-bottom: .5em; }
 
 .repoList {
-  margin-left: 15em;
+  margin-left: 16em;
   padding: 0 1em; }
   .repoList > div {
     margin-bottom: 1.5em;

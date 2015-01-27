@@ -12,6 +12,7 @@ var Router = Backbone.Router.extend({
         window.setTimeout(function() {
         	new GithubClient(name);
         }, 500);
+        document.querySelector('html').style.opacity = 1;
     },
 
     start: function() {

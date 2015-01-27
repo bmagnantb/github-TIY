@@ -109,11 +109,11 @@ main {
 .user {
 		position: absolute;
 		left: 0;
-    width: 13em;
+    width: 14em;
     margin-left: 1em;
     & > img {
         max-width: 13em;
-        margin: 0 auto .5em;
+        margin: 0 0 .5em;
         display: block;
         border-radius: .5em;
     }
@@ -127,7 +127,7 @@ main {
     }
 }
 .repoList {
-    margin-left: 15em;
+    margin-left: 16em;
     padding: 0 1em;
     & > div {
         margin-bottom: 1.5em;

@@ -19,18 +19,18 @@ function app() {
             url: "./bower_components/backbone/backbone.js"
         }, {
             url: "./js/github.js"
-        }, {
+          }, {
             url: "./js/bbsetup.js"
         }
     ).then(function() {
         // start app?
+        // var token = '?access_token=d55489efbd98c9ca121c4e0c026f557d84da1442'
 
-        var users = ['arbolkiri', 'maprules1000', 'Jrharper0592', 'firehawk09', 'dorshinho', 'kawill', 'aallen-dev', 'cjros', 'pmarsh41', 'bmagnantb'];
+        // users.forEach(function(val) {
+        //     document.querySelector('.userMenu').innerHTML += '<div id="' + val + '"><a href="#' + val + '">' + val + '</a></div>';
+        // });
 
-        users.forEach(function(val) {
-            document.querySelector('.userMenu').innerHTML += '<div id="' + val + '"><a href="#' + val + '">' + val + '</a></div>';
-        });
-
+    document.querySelector('html').style.opacity = 1;
     })
 
 }

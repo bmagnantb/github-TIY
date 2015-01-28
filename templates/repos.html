@@ -1,7 +1,13 @@
+<% data.sort(function(a, b) {
+            return (a.updated_at > b.updated_at) ? -1 : 1;
+        }) %>
+<% _.forEach(data, function(repo) {
+	repo.updated_at = (new Date(Date.parse(repo.updated_at))).toDateString().slice(4); %>
 <div>
-  <a href="<%= html_url %>">
-    <h2><%= name %></h2>
+  <a href="<%= repo.html_url %>">
+    <h2><%= repo.name %></h2>
   </a>
-  <h4><%= language %>&nbsp;&nbsp;&nbsp;*-<%= stargazers_count %>&nbsp;&nbsp;&nbsp;Y-<%= forks_count %></h4>
-<h3>Updated <%= updated_at %></h3>
+  <h4><%= repo.language %>&nbsp;&nbsp;&nbsp;*-<%= repo.stargazers_count %>&nbsp;&nbsp;&nbsp;Y-<%= repo.forks_count %></h4>
+<h3>Updated <%= repo.updated_at %></h3>
 </div>
+<% }); %>

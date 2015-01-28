@@ -8,10 +8,17 @@ var Router = Backbone.Router.extend({
     loaduser: function(name) {
         document.querySelector('main').style.left = window.innerWidth + 'px';
         document.querySelector('.userMenu').style.top = 0;
-        window.setTimeout(function() {
-            new GithubClient(name);
-        }, 500);
         document.querySelector('html').style.opacity = 1;
+
+        window.setTimeout(function() {
+
+        // draw profile, draw repos
+       	GitClient.draw('user', GitClient.url.user+name, GitClient.userInfo, GitClient.userInfoCheck, document.querySelector('.user'));
+       	GitClient.draw('repos', GitClient.url.user+name+'/repos', GitClient.repos, GitClient.reposCheck, document.querySelector('.repoList'));
+        }, 500);
+        window.setTimeout(function(){
+        	document.querySelector('main').style.left = 0;
+        }, 600)
     },
 
     start: function() {
@@ -21,6 +28,8 @@ var Router = Backbone.Router.extend({
     },
 
     initialize: function() {
+        window.GitClient = new GithubClient();
+        console.log('initialized');
         Backbone.history.start();
     }
 
